@@ -1,0 +1,133 @@
+.homepage-main
+  background:
+    image: linear-gradient(to right, rgba(45,92,169,.7),rgba(52,190,189,.7)), url("../images/homepage-main-bg.jpg")
+    position: center
+    repeat: no-repeat
+    size: cover
+  min-height: 100vh
+  position: relative
+
+.header
+  display: flex
+  justify-content: space-between
+  padding: $global-padding
+  align-items: center
+  flex-wrap: wrap
+
+.header-nav
+  list-style: none
+  @media(max-width: $md-max-width)
+    position: absolute
+    top: 0
+    left: 0
+    padding-top: 50%
+    text-align: center
+    height: 100vh
+    width: 100vw
+    max-height: 0
+    background-color: $black
+    opacity: 0
+    z-index: 1
+    transition-property: all
+    transition-duration: .5s
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1)
+
+.header-logo
+  z-index: 2
+  img
+    max-width: 40vw
+
+.header-nav-item
+  display: inline-block
+  background-color: transparent
+  font-size: 16px
+  text-transform: uppercase
+  font-weight: 300
+  transition: background-color 0.5s ease-in-out
+  @media(max-width: $md-max-width)
+    display: block
+    margin: $global-margin auto
+    max-width: 200px
+    z-index: 1
+  a
+    padding: 10px 15px
+    display: inline-block
+    color: white
+  &:hover, &:active, &.active
+    background-color: $blue
+
+.mobile-nav-icon
+  display: none
+  background-image: url('../images/ecg_menu.png')
+  height: 50px
+  width: 50px
+  max-width: 20vw
+  max-height: 20vw
+  cursor: pointer
+  background-size: cover
+  background-repeat: no-repeat
+  transition: background-image 0.3s ease-in-out
+  z-index: 2
+  @media(max-width: $md-max-width)
+    display: block
+
+.mobile-nav-icon_close
+  background-image: url('../images/ecg_menu-close.png')
+
+.header-nav-mobile_active
+  max-height: 100vh
+  opacity: 1
+
+.homepage-main-centered-text
+  text-align: center
+  margin: 0
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  min-width: 80vw
+  color: white
+
+.header-title
+  font-size: 1.7rem
+  font-weight: 400
+  margin-top: $global-margin
+
+.header-title_dynamic
+  font-size: 4.2rem
+  font-weight: 700
+
+.header-typed-el
+  font-family: "Maven Light"
+  font-size: 3.9rem
+  text-align: center
+  display: inline-block
+
+.header-typed-wrapper
+  min-width: 300px
+  text-align: center
+  border-bottom: 1px solid white
+  display: inline-block
+
+.mobile-nav-icon
+  position: absolute
+  height: 50px
+  width: 50px
+  display: block
+  left: calc(50% - 25px)
+  bottom: 5vh
+  transition: all 0.3s ease-in-out
+  animation: jumping 1.6s infinite
+  background:
+    image: url("../images/down-arrow.svg")
+    position: center
+    repeat: no-repeat
+    size: cover
+
+@keyframes jumping
+  0%
+    transform: translate(0)
+  50%
+    transform: translate(0,6px)
+  100%
+    transform: translate(0,0)

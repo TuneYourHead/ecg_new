@@ -1,0 +1,87 @@
+.portfolio-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+.portfolio-item
+  list-style: none
+  flex-basis: 33.33%
+  position: relative
+  height: 49vh
+  transition: all 0.3s ease-in-out
+  z-index: 10
+  max-height: 500px
+  background:
+    size: cover
+    repeat: no-repeat
+  a
+    color: white
+    position: absolute
+    z-index: 2
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    text-align: center
+    padding-top: 20%
+  &:nth-of-type(1)
+    @include color-overlay(rgba(243,110,40,.9))
+    &:hover
+      transform: translate(8%, 8%)
+      z-index: 200
+  &:nth-of-type(2)
+    @include color-overlay(rgba(251,202,23,.9))
+    &:hover
+      transform: translateY(8%)
+      z-index: 200
+  &:nth-of-type(3)
+    @include color-overlay(rgba(52,190,189,.9))
+    &:hover
+      transform: translate(-8%, 8%)
+      z-index: 200
+  &:nth-of-type(4)
+    @include color-overlay(rgba(52,137,185,.9))
+    &:hover
+      transform: translate(8%, -8%)
+      z-index: 200
+  &:nth-of-type(5)
+    @include color-overlay(rgba(243,110,84,.9))
+    &:hover
+      transform: translateY(-8%)
+      z-index: 200
+  &:nth-of-type(6)
+    @include color-overlay(rgba(45,92,169,.9))
+    &:hover
+      transform: translate(-8%, -8%)
+      z-index: 200
+  &:hover
+    text-shadow: 0 0 30px rgba(0,0,0,.5), 0 0 1px rgba(0,0,0,1)
+    &:before
+      background: rgba(0,0,0,.2)
+
+
+@for $i from 1 through 6
+    .portfolio-item
+      &:nth-of-type(#{$i})
+        background-image: url("../images/portfolio/portfolio-#{$i}.jpg")
+
+
+.project-title
+  font-size: 1.2rem
+  position: relative
+  max-width: 70%
+  margin: 0 auto $global-margin
+  &:before
+    content: "• "
+  &:after
+    content: " •"
+    
+.project-desc
+  font-family: "Maven Light"
+  font-size: 2rem
+  border-top: 1px solid white
+  display: inline-block
+  max-width: 60%
+  line-height: 3rem
+  padding: $global-margin 0 0 0
+  margin: 0 auto

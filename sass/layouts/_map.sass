@@ -1,0 +1,37 @@
+.map
+  background:
+    image: url("../images/map.png")
+    size: cover
+    position: center
+    repeat: no-repeat
+  min-height: 20vw
+  text-align: center
+
+.map-link
+  padding: 15px 40px
+  color: white
+  background-color: $accent
+  box-shadow: 0 0 10px rgba(0,0,0,.2)
+  transition: all 0.3s ease-in-out
+  display: inline-block
+  margin: 15vw auto 10vw
+  font-size: 1.3rem
+  position: relative
+  &:before
+    position: absolute
+    top: -105px
+    height: 100px
+    left: calc(50% - 50px)
+    width: 100px
+    background-image: url("../images/map_ico.png")
+    background-size: contain
+    background-position: bottom center
+    background-repeat: no-repeat
+    content: ""
+    filter: drop-shadow(0 0 10px rgba(0,0,0,.2))
+    transition: all 0.3s ease-in-out
+    animation: jumping 1.6s infinite
+  &:hover
+    box-shadow: 0 0 5px rgba(0,0,0,.2)
+    &:before
+      top: -115px

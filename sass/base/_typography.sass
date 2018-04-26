@@ -1,0 +1,76 @@
+
+@font-face
+	font-family: 'Maven Light'
+	src: url('../fonts/MavenProLight200-Regular.eot')
+	src: url('../fonts/MavenProLight200-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/MavenProLight200-Regular.woff') format('woff'), url('../fonts/MavenProLight200-Regular.ttf') format('truetype')
+	font-weight: 300
+	font-style: normal
+
+h1, h2, h3, h4, h5, h6
+	margin: 0
+
+
+
+h1, h2, h3, h4, h5, h6
+	display: block
+
+
+h2
+	font-size: 2.5em
+
+h3
+	font-size: 2em
+
+h4
+	font-size: 1.5em
+
+// Basic Text Style
+
+p
+	font-size: 1em
+	line-height: 1.1em
+
+hr
+  border: solid $border-color
+  border-width: 1px 0 0
+  clear: both
+  margin: 0
+  height: 0
+
+a
+  font-size: 1em
+  text-decoration: none
+  transition: color 0.2s ease-in-out
+
+ul
+	margin: 0
+	padding: 0
+
+button, .button, .btn
+  color: white
+  box-shadow: 0 0 0 #ccc
+  border: none
+  height: 40px
+  min-width: 100px
+  padding: 0.5em 1em
+  background-color: $accent
+  font-size: 0.8em
+  letter-spacing: 1px
+  text-transform: uppercase
+  border-radius: $global-radius
+  transition: background-color 0.2s ease-in-out
+  display: block
+  &:hover
+    background-color: lighten($accent, 10%)
+
+
+.section-title
+  text-align: center
+  font-size: 1.8rem
+  margin: $global-margin
+  color: $title-color
+
+.section-subtitle
+  text-align: center
+  font-size: 1.5rem
+  font-family: "Maven Light"

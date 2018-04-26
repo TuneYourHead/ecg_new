@@ -1,0 +1,23 @@
+@for $i from 1 through 18
+    .clients-list-item
+      &:nth-of-type(#{$i})
+        background-image: url("../images/clients/clients-1.png")
+
+.clients
+  padding: $global-padding
+  background-color: $light-gray
+
+.clients-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: flex-start
+
+.clients-list-item
+  background:
+    size: 80%
+    repeat: no-repeat
+    position: left center
+  flex-basis: 16.666%
+  list-style: none
+  min-height: 160px

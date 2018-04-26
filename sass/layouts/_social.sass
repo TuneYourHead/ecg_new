@@ -1,0 +1,29 @@
+.social
+  background-color: $red
+  padding: $global-padding
+
+.social-list
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+
+.social-list-item
+  background-color: $orange
+  border-radius: 50%
+  box-shadow: 0 0 10px rgba(0,0,0,.5)
+  text-align: center
+  transition: all 0.3s ease-in-out
+  display: inline-block
+  list-style: none
+  height: 50px
+  width: 50px
+  a
+    color: white
+    display: inline-block
+    padding: calc(25px - 10px)
+    i
+      font-size: 20px
+  &:hover
+    transform: scale(1.1)
+    box-shadow: 0 0 5px rgba(0,0,0,.3), inset 0 0 1px rgba(255,255,255,.5)

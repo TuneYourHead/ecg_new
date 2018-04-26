@@ -1,0 +1,43 @@
+@for $i from 1 through 4
+    .services-item
+      &:nth-of-type(#{$i})
+        background-image: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url("../images/services/services-#{$i}.jpg")
+
+.services-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  color: white
+
+.services-item
+  padding: $global-padding
+  list-style: none
+  flex-basis: 25%
+  position: relative
+  background:
+    size: cover
+    position: center
+    repeat: no-repeat
+  @include color-overlay(rgba(45,92,169,.5))
+  &:before
+    width: 0
+    transition: all 0.3s ease-in-out
+  &:hover
+    &:before
+      width: 100%
+
+
+.services-item-title
+  text-align: center
+  font-size: 1.5rem
+  margin-top: $global-margin*2
+  min-height: 60px
+  position: relative
+  z-index: 1
+
+.services-item-text
+  font-size: 1rem
+  text-align: justify
+  line-height: 1.6
+  position: relative
+  z-index: 1
