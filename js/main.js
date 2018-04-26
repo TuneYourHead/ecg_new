@@ -1,4 +1,20 @@
 $(document).ready(function(){
+
+  $(function() {
+    $.scrollify({
+  		section : ".scrollify",
+  		sectionName : "section-name",
+  		easing: "easeOutExpo",
+      setHeights: false,
+      updateHash: false,
+  		scrollSpeed: 1000,
+  		offset : 0,
+      overflowScroll: true,
+  		before:function() {},
+  		after:function() {}
+  	});
+  });
+
   var e = ["crea", 300, "tive", 1500, !1, "driven", 800, !1, "modern", 200, 800, !1, "pass", 500, "ionate"],
     a = $(".header-typed-el").typeIt({
       speed: 250,
@@ -10,7 +26,7 @@ $(document).ready(function(){
     $(this).toggleClass('mobile-nav-icon_close');
     $('.header-nav').toggleClass('header-nav-mobile_active');
   });
-  
+
   var animateCounter = function(){
     if($('.odometer').visible()){
       $(".odometer").each(function(){
