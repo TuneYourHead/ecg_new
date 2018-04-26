@@ -5,11 +5,105 @@
   flex-wrap: wrap
   justify-content: space-between
   align-items: center
+  @media(max-width: 1380px)
+    margin: 0 auto
+
 
 .footer-info
   padding: $global-padding
+  padding-bottom: 50px
   background-color: $dark-gray
   display: flex
   flex-wrap: wrap
   justify-content: space-between
-  align-items: center
+  align-items: flex-start
+  color: lighten($gray, 25%)
+  position: relative
+  a
+    color: lighten($gray, 25%)
+    &:hover
+      color: lighten($gray, 40%)
+      text-decoration: underline
+  @media(max-width: 1024px)
+    padding-bottom: 100px
+
+.footer-logo
+  z-index: 2
+  max-width: 40vw
+  @media(max-width: 1380px)
+    flex-basis: 100%
+    margin: 0 auto
+    width: 30vw
+    max-width: 200px
+
+.footer-google
+  @media(max-width: 1380px)
+    margin: 0 auto
+    width: 40vw
+    max-width: 300px
+
+.footer-nav-list
+  list-style: none
+  @media(max-width: 1380px)
+    flex-basis: 100%
+    margin: $global-margin auto
+    text-align: center
+
+.footer-nav-item
+  margin-right: $global-margin/3
+  display: inline-block
+  background-color: transparent
+  font-size: 16px
+  text-transform: uppercase
+  font-weight: 300
+  transition: background-color 0.5s ease-in-out
+  a
+    padding: 10px 15px
+    display: inline-block
+    color: white
+  &:hover, &:active, &.active
+    background-color: $blue
+
+.footer-contacts
+  a
+    display: block
+    line-height: 1.5
+  @media(max-width: 1024px)
+    flex-basis: 50%
+    order: 2
+
+.footer-social
+  align-self: center
+  text-align: center
+  @media(max-width: 1024px)
+    flex-basis: 100%
+    order: 1
+    margin-bottom: $global-margin
+
+.footer-copyright
+  line-height: 1.5
+  @media(max-width: 1024px)
+    position: absolute
+    width: 100%
+    bottom: 50px
+    left: 0
+
+.footer-social-list
+  list-style: none
+
+.footer-social-list-item
+  display: inline-block
+  margin-right: $global-margin*2
+  &:last-of-type
+    margin-right: 0
+  i
+    font-size: 1.1rem
+
+.footer-links
+  a
+    display: block
+    text-align: right
+    line-height: 1.5
+  @media(max-width: 1024px)
+    flex-basis: 50%
+    order: 3

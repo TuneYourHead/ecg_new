@@ -14,7 +14,15 @@
   list-style: none
   flex-basis: 25%
   position: relative
-  height: calc(100vh - 125px)
+  min-height: calc(100vh - 125px)
+  max-height: 800px
+  @media(max-width: 1024px)
+    padding: 12.5px 20px
+    flex-basis: 50%
+    min-height: calc(50vh - 63px)
+  @media(max-width: 600px)
+    flex-basis: 100%
+    min-height: calc(25vh - 31.5px)
   background:
     size: cover
     position: center

@@ -6,6 +6,8 @@
     repeat: no-repeat
   min-height: 20vw
   text-align: center
+  @media(max-width: 800px)
+    min-height: 30vh
 
 .map-link
   padding: 10px 40px
@@ -15,8 +17,12 @@
   transition: all 0.3s ease-in-out
   display: inline-block
   margin: 15vw auto 10vw
-  font-size: 1.3rem
+  font-size: 1.2rem
+  font-family: "Maven Light"
   position: relative
+  font-weight: bold
+  @media(max-width: 800px)
+    margin: 20vh auto 10vh
   &:before
     position: absolute
     top: -105px

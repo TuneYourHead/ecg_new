@@ -13,6 +13,8 @@
   padding: $global-padding
   align-items: center
   flex-wrap: wrap
+  @media(max-width: 600px)
+    padding: $global-padding-sm
 
 .header-nav
   list-style: none
@@ -92,24 +94,37 @@
   font-size: 1.7rem
   font-weight: 400
   margin-top: $global-margin
+  @media(max-width: 600px)
+    font-size: 1.3rem
 
 .header-title_dynamic
   font-size: 4.2rem
   font-weight: 700
+  @media(max-width: 800px)
+    font-size: 3rem
+  @media(max-width: 600px)
+    font-size: 2rem
+
 
 .header-typed-el
   font-family: "Maven Light"
   font-size: 3.9rem
   text-align: center
   display: inline-block
+  @media(max-width: 800px)
+    font-size: 2.5rem
+  @media(max-width: 600px)
+    font-size: 2rem
 
 .header-typed-wrapper
   min-width: 300px
   text-align: center
   border-bottom: 1px solid white
   display: inline-block
+  @media(max-width: 800px)
+    min-width: 200px
 
-.mobile-nav-icon
+.header-scroll-arrow
   position: absolute
   height: 50px
   width: 50px

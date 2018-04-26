@@ -14,6 +14,8 @@
     max-width: 100%
     margin-top: -20%
     width: 100%
+    @media(max-width: 600px)
+      margin-top: 0
   .team-item_after
     position: absolute
     top: 0
@@ -25,6 +27,14 @@
       opacity: 1
     .team-desc
       opacity: 1
+  @media(max-width: 1024px)
+    flex-basis: 33.3%
+    height: 20vh
+    max-height: 280px
+  @media(max-width: 600px)
+    max-height: 240px
+  @media(max-width: 400px)
+    max-height: 400px
 
 .team-desc
   position: absolute
@@ -37,13 +47,21 @@
   padding: 5px
   opacity: 0
   transition: all 0.3s ease-in-out
+  @media(max-width: 600px)
+    opacity: 1
+    bottom: -1px
 
 .team-title
   font-size: 1.2vw
   line-height: 1
   font-family: "Maven Light"
+  @media(max-width: 600px)
+    font-size: 1.2em
+    line-height: 1.3
 
 .team-subtitle
   font-size: .9vw
   line-height: 1.2
   font-family: "Maven Light"
+  @media(max-width: 600px)
+    font-size: 0.6em

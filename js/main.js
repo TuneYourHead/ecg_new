@@ -21,7 +21,9 @@ $(document).ready(function(){
       autoStart: !1,
       loop: !0
       });
+
   for (var t in e) "string" == typeof e[t] ? a = a.tiType(e[t]) : !1 === e[t] ? a = a.tiDelete() : Number.isInteger(e[t]) && (a = e[t] > 0 ? a.tiPause(e[t]) : a.tiDelete(-e[t]))
+
   $('.mobile-nav-icon').on('click', function(){
     $(this).toggleClass('mobile-nav-icon_close');
     $('.header-nav').toggleClass('header-nav-mobile_active');
@@ -37,6 +39,23 @@ $(document).ready(function(){
   };
 
   animateCounter();
+
+  if(window.matchMedia('(max-width: 600px)').matches){
+    $('.team').slick({
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      arrows: false,
+      autoplay: true,
+      responsive: [{
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }]
+    });
+  }
 
   $( window ).scroll(function() {
     animateCounter();
