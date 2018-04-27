@@ -1,10 +1,10 @@
-$(document).ready(function(){
+$( document ).ready(function(){
 
   var animateCounter = function(){
     if($('.odometer').visible()){
       $(".odometer").each(function(){
-        var value = $(this).data('count');
-        $(this).html(value);
+        var value = $( this ).data('count');
+        $( this ).html(value);
       })
     }
   };
@@ -25,7 +25,7 @@ $(document).ready(function(){
   };
 
   var activateSlider = function(){
-    if(window.matchMedia('(max-width: 600px)').matches){
+    if( window.matchMedia('(max-width: 600px)' ).matches){
       $('.team').slick({
         infinite: true,
         slidesToShow: 2,
@@ -52,7 +52,7 @@ $(document).ready(function(){
         });
     for (var t in e) "string" == typeof e[t] ? a = a.tiType(e[t]) : !1 === e[t] ? a = a.tiDelete() : Number.isInteger(e[t]) && (a = e[t] > 0 ? a.tiPause(e[t]) : a.tiDelete(-e[t]))
   };
-  
+
   typingAnimation();
   animateCounter();
   activateSlider();
@@ -61,12 +61,12 @@ $(document).ready(function(){
   $( window ).scroll(function() {
     animateCounter();
   });
-  $(window).resize(function(){
+  $( window ).resize(function(){
     activateSlider();
   });
 
   $('.mobile-nav-icon').on('click', function(){
-    $(this).toggleClass('mobile-nav-icon_close');
+    $( this ).toggleClass('mobile-nav-icon_close');
     $('.header-nav').toggleClass('header-nav-mobile_active');
   });
 
