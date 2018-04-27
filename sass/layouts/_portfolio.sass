@@ -28,10 +28,9 @@
     width: 100%
     top: 0
     left: 0
+    bottom: 0
+    right: 0
     text-align: center
-    padding-top: 15vh
-    @media(max-width: 1024px)
-      padding-top: 12vh
   &:nth-of-type(1)
     @include color-overlay(rgba(243,110,40,.9))
     &:hover
@@ -67,6 +66,15 @@
     &:before
       background: rgba(0,0,0,.2)
 
+.project-text
+  position: absolute
+  top: 50%
+  margin: 0 auto
+  width: 100%
+  text-align: center
+  padding: $global-padding
+  transform: translateY(-50%)
+
 
 @for $i from 1 through 6
     .portfolio-item
@@ -76,7 +84,7 @@
 .project-title
   font-size: 1.2rem
   position: relative
-  max-width: 70%
+  max-width: 90%
   margin: 0 auto $global-margin
   &:before
     content: "• "
@@ -90,7 +98,7 @@
   font-size: 2rem
   border-top: 1px solid white
   display: inline-block
-  max-width: 60%
+  max-width: 80%
   line-height: 1.2
   padding: $global-margin 0 0 0
   margin: 0 auto
